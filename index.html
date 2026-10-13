@@ -1,24 +1,18 @@
 <!DOCTYPE html>
-<!-- Tells the browser this is a modern HTML5 page -->
 <html lang="en">
 <head>
-  <!-- Lets the browser read special characters correctly -->
   <meta charset="UTF-8">
-  <!-- Makes the page fit phone screens instead of shrinking -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ashish Kumar | Portfolio</title>
 
-  <!-- Load the four Google Fonts (needs internet) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@500&family=DM+Sans:wght@400;500&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
 
-  <!-- Link to my CSS file -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- ===== 1. NAVIGATION (sticky top bar) ===== -->
   <header class="nav">
     <a href="#home" class="nav-logo">AK</a>
     <nav class="nav-links">
@@ -34,17 +28,13 @@
 
   <main>
 
-    <!-- ===== 2. HERO ===== -->
     <section class="hero" id="home">
       <h1 class="hero-name">
-        <!-- Each letter has its own span so it can change font on hover -->
         <span class="hero-first"><span class="letter">A</span><span class="letter">s</span><span class="letter">h</span><span class="letter">i</span><span class="letter">s</span><span class="letter">h</span></span>
-        <!-- "Kumar" is hollow text that fills with gold on hover -->
         <span class="hero-last"><span class="letter">K</span><span class="letter">u</span><span class="letter">m</span><span class="letter">a</span><span class="letter">r</span></span>
       </h1>
       <p class="hero-tagline">Dancer, athlete, anime fan, and a computer science student just getting started.</p>
 
-      <!-- Endless scrolling strip. The words are written twice so the loop looks seamless -->
       <div class="marquee">
         <div class="marquee-track">
           <span>Dance</span><span>Football</span><span>Volleyball</span><span>Badminton</span><span>Drawing</span><span>Anime</span><span>Code</span>
@@ -53,7 +43,6 @@
       </div>
     </section>
 
-    <!-- ===== 3. ABOUT ===== -->
     <section class="section section-alt" id="about">
       <h2 class="section-title">About</h2>
       <div class="about-grid">
@@ -67,7 +56,6 @@
       </div>
     </section>
 
-    <!-- ===== 4. SKILLS ===== -->
     <section class="section" id="skills">
       <h2 class="section-title">Skills</h2>
 
@@ -87,9 +75,7 @@
       </ul>
     </section>
 
-    <!-- ===== 5. EDUCATION (timeline) ===== -->
     <section class="section section-alt" id="education">
-      <!-- Two columns: sticky title on the left, timeline on the right -->
       <div class="journey-grid">
       <h2 class="section-title journey-title">Education</h2>
       <ol class="timeline">
@@ -113,7 +99,6 @@
       </div>
     </section>
 
-    <!-- ===== 6. ON THE STAGE ===== -->
     <section class="section" id="stage">
       <h2 class="section-title">On the stage</h2>
       <p class="handwritten">all of this by class 8</p>
@@ -125,11 +110,9 @@
       <p class="text">Plus many certificates.</p>
     </section>
 
-    <!-- ===== 7. WHAT I LOVE (click to open) ===== -->
     <section class="section section-alt" id="love">
       <h2 class="section-title">What I love</h2>
       <div class="love-list">
-        <!-- Hover (or tap on a phone) a card to show its text. tabindex="0" lets phones focus it -->
         <div class="love-card" tabindex="0">
           <h3 class="love-title">Dancing<span class="plus"></span></h3>
           <p class="love-text">5-time silver medallist at state-level championships by class 8. That journey brought me 13+ trophies, 20+ medals and many certificates, and I still love every minute on stage.</p>
@@ -157,7 +140,6 @@
       </div>
     </section>
 
-    <!-- ===== 8. PROJECTS ===== -->
     <section class="section" id="projects">
       <h2 class="section-title">Projects</h2>
       <div class="project-grid">
@@ -173,12 +155,10 @@
       <p class="text">Internships: looking for one once I've built enough skills.</p>
     </section>
 
-    <!-- ===== 9. CONTACT ===== -->
     <section class="section section-alt" id="contact">
       <h2 class="section-title">Let's build something together</h2>
       <a class="email-link" href="mailto:xashishz2008@gmail.com">xashishz2008@gmail.com</a>
 
-      <!-- SOCIAL LINKS: uncomment and add your real links later
       <a href="https://github.com/YOUR-NAME">GitHub</a>
       <a href="https://linkedin.com/in/YOUR-NAME">LinkedIn</a>
       <a href="https://instagram.com/YOUR-NAME">Instagram</a>
@@ -186,12 +166,10 @@
     </section>
   </main>
 
-  <!-- ===== 10. FOOTER ===== -->
   <footer class="footer">
     <p>Ashish Kumar, Radaur, Haryana. Built by hand with HTML and CSS.</p>
   </footer>
 
-  <!-- Link to my JavaScript file (at the end so the page loads first) -->
   <script src="script.js"></script>
 </body>
 </html>

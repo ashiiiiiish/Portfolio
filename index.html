@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<!-- Tells the browser this is a modern HTML5 page -->
+<html lang="en">
+<head>
+  <!-- Lets the browser read special characters correctly -->
+  <meta charset="UTF-8">
+  <!-- Makes the page fit phone screens instead of shrinking -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ashish Kumar | Portfolio</title>
+
+  <!-- Load the four Google Fonts (needs internet) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@500&family=DM+Sans:wght@400;500&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+
+  <!-- Link to my CSS file -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== 1. NAVIGATION (sticky top bar) ===== -->
+  <header class="nav">
+    <a href="#home" class="nav-logo">AK</a>
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#stage">Stage</a>
+      <a href="#love">Love</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===== 2. HERO ===== -->
+    <section class="hero" id="home">
+      <h1 class="hero-name">
+        <!-- Each letter has its own span so it can change font on hover -->
+        <span class="hero-first"><span class="letter">A</span><span class="letter">s</span><span class="letter">h</span><span class="letter">i</span><span class="letter">s</span><span class="letter">h</span></span>
+        <!-- "Kumar" is hollow text that fills with gold on hover -->
+        <span class="hero-last"><span class="letter">K</span><span class="letter">u</span><span class="letter">m</span><span class="letter">a</span><span class="letter">r</span></span>
+      </h1>
+      <p class="hero-tagline">Dancer, athlete, anime fan, and a computer science student just getting started.</p>
+
+      <!-- Endless scrolling strip. The words are written twice so the loop looks seamless -->
+      <div class="marquee">
+        <div class="marquee-track">
+          <span>Dance</span><span>Football</span><span>Volleyball</span><span>Badminton</span><span>Drawing</span><span>Anime</span><span>Code</span>
+          <span>Dance</span><span>Football</span><span>Volleyball</span><span>Badminton</span><span>Drawing</span><span>Anime</span><span>Code</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 3. ABOUT ===== -->
+    <section class="section section-alt" id="about">
+      <h2 class="section-title">About</h2>
+      <div class="about-grid">
+        
+        <img src="About photo.jpeg" alt="Ashish Kumar" class="about-photo">
+        <div>
+          <p class="big-quote">Born and brought up in Haryana, and always on the move.</p>
+          <p class="text">I'm 18 years old, from Radaur, Yamunanagar. I love all kinds of sports: football for my school team till 10th, then volleyball and badminton in 11th and 12th, and I want to try every other sport too.</p>
+          <p class="text">I'm completely new to tech and this site is one of my first builds.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 4. SKILLS ===== -->
+    <section class="section" id="skills">
+      <h2 class="section-title">Skills</h2>
+
+      <h3 class="group-title">Learning in tech</h3>
+      <ul class="chips">
+        <li class="chip">HTML</li><li class="chip">CSS</li><li class="chip">JavaScript (basics)</li><li class="chip">Computer Science</li><li class="chip">Data Science</li>
+      </ul>
+
+      <h3 class="group-title">Beyond the screen</h3>
+      <ul class="chips">
+        <li class="chip">Dance</li><li class="chip">Drawing</li><li class="chip">Football</li><li class="chip">Volleyball</li><li class="chip">Badminton</li>
+      </ul>
+
+      <h3 class="group-title">Languages</h3>
+      <ul class="chips">
+        <li class="chip">Hindi</li><li class="chip">English</li><li class="chip">Punjabi</li><li class="chip">Haryanvi</li>
+      </ul>
+    </section>
+
+    <!-- ===== 5. EDUCATION (timeline) ===== -->
+    <section class="section section-alt" id="education">
+      <!-- Two columns: sticky title on the left, timeline on the right -->
+      <div class="journey-grid">
+      <h2 class="section-title journey-title">Education</h2>
+      <ol class="timeline">
+        <li class="timeline-item">
+          <h3>DPS Yamunanagar</h3>
+          <p class="text">Up to class 10.</p>
+        </li>
+        <li class="timeline-item">
+          <h3>FIITJEE, Chandigarh</h3>
+          <p class="text">Classes 11 and 12, JEE preparation via the school-integrated program at Stepping Stones School.</p>
+        </li>
+        <li class="timeline-item">
+          <h3>Scaler School of Technology</h3>
+          <p class="text">Computer Science, batch of 2030.</p>
+        </li>
+        <li class="timeline-item">
+          <h3>BITS Pilani</h3>
+          <p class="text">Parallel B.Sc. (Hons) in Data Science.</p>
+        </li>
+      </ol>
+      </div>
+    </section>
+
+    <!-- ===== 6. ON THE STAGE ===== -->
+    <section class="section" id="stage">
+      <h2 class="section-title">On the stage</h2>
+      <p class="handwritten">all of this by class 8</p>
+      <div class="stats">
+        <div class="stat"><span class="stat-number">5x</span><span class="stat-label">State-level dance silver medallist</span></div>
+        <div class="stat"><span class="stat-number">13+</span><span class="stat-label">Trophies</span></div>
+        <div class="stat"><span class="stat-number">20+</span><span class="stat-label">Medals</span></div>
+      </div>
+      <p class="text">Plus many certificates.</p>
+    </section>
+
+    <!-- ===== 7. WHAT I LOVE (click to open) ===== -->
+    <section class="section section-alt" id="love">
+      <h2 class="section-title">What I love</h2>
+      <div class="love-list">
+        <!-- Hover (or tap on a phone) a card to show its text. tabindex="0" lets phones focus it -->
+        <div class="love-card" tabindex="0">
+          <h3 class="love-title">Dancing<span class="plus"></span></h3>
+          <p class="love-text">5-time silver medallist at state-level championships by class 8. That journey brought me 13+ trophies, 20+ medals and many certificates, and I still love every minute on stage.</p>
+        </div>
+        <div class="love-card" tabindex="0">
+          <h3 class="love-title">Sports<span class="plus"></span></h3>
+          <p class="love-text">Football for my school team till 10th, then volleyball and badminton in 11th and 12th. I love all kinds of sports and I want to try every other one too.</p>
+        </div>
+        <div class="love-card" tabindex="0">
+          <h3 class="love-title">Drawing<span class="plus"></span></h3>
+          <p class="love-text">My quiet way to lose track of time. Just a pencil, a sheet of paper and an idea, and hours disappear without me noticing.</p>
+        </div>
+        <div class="love-card" tabindex="0">
+          <h3 class="love-title">Anime<span class="plus"></span></h3>
+          <p class="love-text">Above movies and web series, anime is my favourite thing to watch. The stories, the art and the characters stay with me long after the episode ends.</p>
+        </div>
+        <div class="love-card" tabindex="0">
+          <h3 class="love-title">Movies<span class="plus"></span></h3>
+          <p class="love-text">One of my favourite ways to switch off after a long day. A good movie is the perfect break from studying and coding.</p>
+        </div>
+        <div class="love-card" tabindex="0">
+          <h3 class="love-title">Web series<span class="plus"></span></h3>
+          <p class="love-text">Always one more episode to watch. I love getting pulled into a story that keeps me guessing till the very last scene.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 8. PROJECTS ===== -->
+    <section class="section" id="projects">
+      <h2 class="section-title">Projects</h2>
+      <div class="project-grid">
+        <article class="project-card">
+          <h3>This portfolio</h3>
+          <p class="text">Live and improving.</p>
+        </article>
+        <article class="project-card">
+          <h3>Student portal</h3>
+          <p class="text">Made for my web development assignment. In progress.</p>
+        </article>
+      </div>
+      <p class="text">Internships: looking for one once I've built enough skills.</p>
+    </section>
+
+    <!-- ===== 9. CONTACT ===== -->
+    <section class="section section-alt" id="contact">
+      <h2 class="section-title">Let's build something together</h2>
+      <a class="email-link" href="mailto:xashishz2008@gmail.com">xashishz2008@gmail.com</a>
+
+      <!-- SOCIAL LINKS: uncomment and add your real links later
+      <a href="https://github.com/YOUR-NAME">GitHub</a>
+      <a href="https://linkedin.com/in/YOUR-NAME">LinkedIn</a>
+      <a href="https://instagram.com/YOUR-NAME">Instagram</a>
+      -->
+    </section>
+  </main>
+
+  <!-- ===== 10. FOOTER ===== -->
+  <footer class="footer">
+    <p>Ashish Kumar, Radaur, Haryana. Built by hand with HTML and CSS.</p>
+  </footer>
+
+  <!-- Link to my JavaScript file (at the end so the page loads first) -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+/* ===== 1. THEME: change colours and fonts here only ===== */
+:root {
+  --bg: #0b0b0b;          /* main black background */
+  --bg-alt: #161616;      /* slightly lighter black for alternate sections */
+  --text: #fffaf0;        /* ivory text */
+  --muted: #b9b2a3;       /* softer grey-beige text */
+  --gold: #d4af37;        /* accent colour */
+  --font-heading: "Anton", sans-serif;
+  --font-accent: "Playfair Display", serif;
+  --font-hand: "Caveat", cursive;
+  --font-body: "DM Sans", sans-serif;
+}
+
+/* ===== 2. BASE STYLES ===== */
+* { box-sizing: border-box; margin: 0; padding: 0; }  /* remove default spacing */
+html { scroll-behavior: smooth; scroll-padding-top: 70px; }  /* smooth scroll; stop sticky nav hiding titles */
+body { background: var(--bg); color: var(--text); font-family: var(--font-body); font-size: 1.1rem; line-height: 1.7; }
+a { color: inherit; text-decoration: none; }
+ul, ol { list-style: none; }
+
+/* ===== 3. NAVIGATION ===== */
+.nav { position: sticky; top: 0; z-index: 10; display: flex; justify-content: space-between; align-items: center; padding: 16px 5%; background: var(--bg); border-bottom: 1px solid var(--gold); }
+.nav-logo { font-family: var(--font-heading); font-size: 1.8rem; color: var(--gold); }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { font-size: 0.95rem; color: var(--muted); transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+/* ===== 4. HERO ===== */
+.hero { padding: 80px 5% 0; }
+.hero-name { font-family: var(--font-heading); font-weight: 400; font-size: clamp(4rem, 17vw, 14rem); line-height: 0.95; text-transform: uppercase; }
+.hero-first, .hero-last { display: block; }
+.letter { display: inline-block; cursor: default; }  /* inline-block lets each letter react on its own */
+.letter:hover { font-family: var(--font-hand); font-weight: 500; text-transform: none; }  /* thin curvy handwritten font on hover */
+.hero-last { color: transparent; -webkit-text-stroke: 2px var(--gold); transition: color 0.5s; }  /* hollow text */
+.hero-last:hover { color: var(--gold); }  /* fills on hover */
+.hero-tagline { font-family: var(--font-accent); font-style: italic; font-size: clamp(1.3rem, 3vw, 2rem); max-width: 40ch; margin: 30px 0 60px; }
+
+/* Scrolling strip */
+.marquee { overflow: hidden; border-top: 1px solid var(--gold); border-bottom: 1px solid var(--gold); margin: 0 -5%; padding: 14px 0; }
+.marquee-track { display: flex; width: max-content; animation: scroll 25s linear infinite; }
+.marquee-track span { font-family: var(--font-heading); font-size: 2rem; text-transform: uppercase; padding: 0 30px; color: var(--gold); }
+.marquee:hover .marquee-track { animation-play-state: paused; }  /* strip stops when the mouse is over it */
+@keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }  /* move left by half = one full copy */
+
+/* ===== 5. SHARED SECTION STYLES ===== */
+.section { padding: 100px 5%; }
+.section-alt { background: var(--bg-alt); }
+.section-title { font-family: var(--font-heading); font-weight: 400; font-size: clamp(3rem, 9vw, 7rem); text-transform: uppercase; margin-bottom: 50px; }
+.group-title { font-family: var(--font-accent); font-style: italic; font-weight: 400; font-size: 1.6rem; color: var(--gold); margin: 40px 0 16px; }
+.text { max-width: 65ch; color: var(--muted); margin-bottom: 16px; }  /* keeps lines short and readable */
+.handwritten { font-family: var(--font-hand); font-size: 2rem; color: var(--gold); margin-bottom: 30px; }
+.placeholder { display: flex; align-items: center; justify-content: center; min-height: 260px; border: 1px dashed var(--gold); color: var(--muted); }
+.placeholder-tall { min-height: 420px; }
+
+/* ===== 6. ABOUT ===== */
+.about-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 60px; align-items: start; }
+.big-quote { font-family: var(--font-accent); font-style: italic; font-size: clamp(1.8rem, 4vw, 3rem); line-height: 1.2; margin-bottom: 30px; }
+.about-photo { width: 100%; height: 420px; object-fit: cover; border: 1px solid var(--gold);}
+/* ===== 7. SKILLS CHIPS ===== */
+.chips { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 16px; }  /* grid of cards */
+.chip { display: flex; align-items: center; justify-content: center; min-height: 110px; padding: 20px; text-align: center; border: 1px solid var(--gold); border-radius: 12px; font-family: var(--font-heading); font-size: 1.3rem; text-transform: uppercase; transition: background 0.3s, color 0.3s, transform 0.3s; }  /* flashcard look */
+.chip:hover { background: var(--gold); color: var(--bg); transform: translateY(-6px) rotate(-2deg); }  /* card changes colour and tilts */
+
+/* ===== 8. TIMELINE ===== */
+.journey-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 60px; align-items: start; }  /* align-items: start is needed for sticky */
+.journey-title { position: sticky; top: 110px; }  /* stays on screen until the section ends */
+.timeline { border-left: 1px solid var(--gold); margin-left: 8px; }
+.timeline-item { position: relative; padding: 0 0 120px 40px; }  /* big gap so there is room to scroll */
+.timeline-item::before { content: ""; position: absolute; left: -7px; top: 8px; width: 13px; height: 13px; background: var(--gold); border-radius: 50%; }  /* gold dot */
+.timeline-item h3 { font-family: var(--font-heading); font-weight: 400; font-size: 2rem; text-transform: uppercase; }
+
+/* ===== 9. ON THE STAGE ===== */
+.stats { display: flex; flex-wrap: wrap; gap: 60px; margin-bottom: 30px; }
+.stat-number { display: block; font-family: var(--font-heading); font-size: clamp(5rem, 14vw, 10rem); line-height: 1; color: var(--gold); }
+.stat-label { color: var(--muted); max-width: 20ch; display: block; }
+
+/* ===== 10. WHAT I LOVE (hover cards) ===== */
+.love-card { border-top: 1px solid var(--gold); outline: none; }
+.love-card:last-child { border-bottom: 1px solid var(--gold); }
+.love-title { display: flex; justify-content: space-between; align-items: center; padding: 26px 0; font-family: var(--font-heading); font-weight: 400; font-size: clamp(2rem, 6vw, 4rem); text-transform: uppercase; transition: color 0.3s; cursor: pointer; }
+.love-card:hover .love-title, .love-card:focus .love-title { color: var(--gold); }
+.plus { position: relative; width: 28px; height: 28px; transition: transform 0.4s; }  /* the + icon */
+.plus::before, .plus::after { content: ""; position: absolute; background: var(--gold); }
+.plus::before { left: 0; right: 0; top: 13px; height: 2px; }  /* horizontal bar */
+.plus::after { top: 0; bottom: 0; left: 13px; width: 2px; }   /* vertical bar */
+.love-card:hover .plus, .love-card:focus .plus { transform: rotate(45deg); }  /* + turns into a cross */
+.love-text { max-width: 60ch; color: var(--muted); max-height: 0; overflow: hidden; opacity: 0; transform: translateY(-15px); transition: max-height 0.5s, opacity 0.5s, transform 0.5s; }  /* hidden by default */
+.love-card:hover .love-text, .love-card:focus .love-text { max-height: 220px; opacity: 1; transform: translateY(0); padding-bottom: 26px; }  /* slides in on hover */
+
+/* ===== 11. PROJECTS ===== */
+.project-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-bottom: 40px; }
+.project-card { padding: 40px; border: 1px solid var(--gold); transition: transform 0.3s, background 0.3s; }
+.project-card:hover { transform: translateY(-10px); background: var(--bg-alt); }  /* lifts up */
+.project-card h3 { font-family: var(--font-heading); font-weight: 400; font-size: 2.2rem; text-transform: uppercase; margin-bottom: 10px; }
+
+/* ===== 12. CONTACT AND FOOTER ===== */
+.email-link { display: inline-block; font-family: var(--font-body); font-size: 1rem; border-bottom: 1px solid var(--gold); word-break: break-all; transition: color 0.3s; }  /* small plain text, much smaller than the heading */
+.email-link:hover { color: var(--gold); }
+.footer { padding: 30px 5%; text-align: center; color: var(--muted); font-size: 0.9rem; }
+
+/* ===== 13. RESPONSIVE (tablet and phone) ===== */
+@media (max-width: 800px) {
+  .section { padding: 70px 5%; }
+  .nav-links { display: none; }  /* hide links on small screens to keep it simple */
+  .about-grid, .project-grid, .journey-grid { grid-template-columns: 1fr; }
+  .journey-title { position: static; }  /* no sticky on phones */  /* stack in one column */
+}
+
+/* ===== 14. RESPECT USERS WHO WANT LESS MOTION ===== */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
